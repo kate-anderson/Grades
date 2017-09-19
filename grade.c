@@ -16,8 +16,8 @@ int main(void)
     FILE *examPtr;      //exam_scores.txt file pointer
     FILE *homeworkPtr;  //homework_scores.txt file pointer
     FILE *gradePtr;     //final_grades.txt file pointer
-    int snum,i,j;
-    float hgrade,min;
+    int snum,i,j;       //snum is the number of students
+    float hgrade,min;   //homework grade and a variable to keep track of the minimum homework grade
     int student;        //student ID
     float quiz[500]={0};
     float exam[500]={0};
@@ -35,7 +35,7 @@ int main(void)
     }
     else
     {
-        //read the values from the quiz file and print them to the screen
+        //read the values from the quiz file
         fscanf(quizPtr,"%d",&snum);
         for(i=0;i<snum;i++)
         {
@@ -52,7 +52,7 @@ int main(void)
     }
     else
     {
-        //read the values from the exam file and print them to the screen
+        //read the values from the exam file
         fscanf(examPtr,"%d",&snum);
         for(i=0;i<snum;i++)
         {
